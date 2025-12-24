@@ -12,7 +12,7 @@ namespace Tyuiu.AristovaAK.Sprint5.Task0.V28.Test
             int x = 3;
 
             string path = ds.SaveToFileTextData(x);
-
+             
             FileInfo fileInfo = new FileInfo(path);
             bool fileExists = fileInfo.Exists;
             bool wait = true;

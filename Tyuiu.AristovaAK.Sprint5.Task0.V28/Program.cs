@@ -22,7 +22,6 @@ internal class Program
 
         int x = 3;
         string filePath = ds.SaveToFileTextData(x);
-        
         Console.WriteLine("Файл: " + filePath);
         Console.WriteLine("Создан!");
 
