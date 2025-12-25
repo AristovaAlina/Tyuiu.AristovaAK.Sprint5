@@ -7,7 +7,7 @@ internal class Program
         Console.Title = "Спринт #5 | Выполнила: Аристова А. К. | СМАРТб-25-1";
         Console.WriteLine("***************************************************************************");
         Console.WriteLine("* Спринт #5                                                               *");
-        Console.WriteLine("* Тема: Класс File. Запись данных в текстовый файл                        *");
+        Console.WriteLine("* Класс File. Запись структурированных данных в текстовый файл            *");
         Console.WriteLine("* Задание #2                                                              *");
         Console.WriteLine("* Вариант #17                                                             *");
         Console.WriteLine("* Выполнила: Аристова Алина Константиновна | СМАРТб-25-1                  *");
