@@ -18,6 +18,9 @@ internal class Program
         int startValue = -5;
         int stopValue = 5;
 
+        string path = ds.SaveToFileTextData(startValue, stopValue);
+
+        Console.WriteLine("Таблица значений:");
         Console.WriteLine("  x   |   F(x)   ");
         Console.WriteLine("-----------------");
 
@@ -28,9 +31,11 @@ internal class Program
             Console.WriteLine($"{x,5} | {y,8:F2}");
         }
 
-        string res = ds.SaveToFileTextData(startValue, stopValue);
+        Console.WriteLine("\nСодержимое файла:");
+        string fileContent = File.ReadAllText(path);
+        Console.WriteLine(fileContent);
 
-        Console.WriteLine("Файл: " + res);
+        Console.WriteLine("Файл: " + path);
         Console.WriteLine("Создан!");
         Console.ReadKey();
     }

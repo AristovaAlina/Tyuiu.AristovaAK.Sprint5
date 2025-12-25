@@ -6,7 +6,6 @@ namespace Tyuiu.AristovaAK.Sprint5.Task1.V14.Lib
     {
         public string SaveToFileTextData(int startValue, int stopValue)
         {
-            string path = Path.Combine(Path.GetTempPath(), "OutPutFileTask1.txt");
             string result = "";
 
             for (int x = startValue; x <= stopValue; x++)
@@ -14,13 +13,14 @@ namespace Tyuiu.AristovaAK.Sprint5.Task1.V14.Lib
                 double y = Math.Sin(x) / (x + 1.7) - Math.Cos(x) * 4 * x - 6;
                 y = Math.Round(y, 2);
 
+                string str = y.ToString("F2").Replace(".", ",").TrimEnd('0').TrimEnd(',');
+
                 if (x > startValue)
                     result += "\n";
-                result += y.ToString("F2").Replace(".", ",");
+                result += str;
             }
-
+            string path = Path.Combine(Path.GetTempPath(), "OutPutFileTask1.txt");
             File.WriteAllText(path, result);
-
             return path;
         }
     }
