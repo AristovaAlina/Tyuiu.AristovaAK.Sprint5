@@ -8,7 +8,7 @@ internal class Program
         Console.WriteLine("***************************************************************************");
         Console.WriteLine("* Спринт #5                                                               *");
         Console.WriteLine("* Тема: Класс File. Запись данных в текстовый файл                        *");
-        Console.WriteLine("* Задание #1                                                              *");
+        Console.WriteLine("* Задание #0                                                              *");
         Console.WriteLine("* Вариант #28                                                             *");
         Console.WriteLine("* Выполнила: Аристова Алина Константиновна | СМАРТб-25-1                  *");
         Console.WriteLine("***************************************************************************");
