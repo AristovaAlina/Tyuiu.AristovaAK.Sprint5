@@ -22,7 +22,7 @@ namespace Tyuiu.AristovaAK.Sprint5.Task2.V17.Lib
                 }
                 res += "\n";
             }
-
+             
             string folder = Path.GetTempPath();
             string str = "OutPutFileTask2.csv";
             string path = Path.Combine(folder, str);

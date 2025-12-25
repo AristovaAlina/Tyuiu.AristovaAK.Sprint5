@@ -19,7 +19,7 @@ internal class Program
         Console.WriteLine("***************************************************************************");
         Console.WriteLine("* ИСХОДНЫЕ ДАННЫЕ:                                                        *");
         Console.WriteLine("***************************************************************************");
-
+         
         int[,] matrix = { { 2, 1, 7 }, { 1, 2, 4 }, { 2, 3, 4 } };
         Console.WriteLine("Массив:");
         for (int i = 0; i < matrix.GetLength(0); i++)
