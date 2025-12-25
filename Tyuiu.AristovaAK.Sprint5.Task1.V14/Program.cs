@@ -30,8 +30,6 @@ internal class Program
 
         string res = ds.SaveToFileTextData(startValue, stopValue);
 
-        Console.WriteLine("Значения:\n" + res);
-
         Console.WriteLine("Файл: " + res);
         Console.WriteLine("Создан!");
         Console.ReadKey();
