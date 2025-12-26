@@ -11,18 +11,18 @@ namespace Tyuiu.AristovaAK.Sprint5.Task2.V17.Lib
             {
                 for (int j = 0; j < matrix.GetLength(1); j++)
                 {
-                    if (matrix [i, j] % 2 != 0)
+                    if (matrix[i, j] % 2 != 0)
                     {
-                        res += "0 ";
+                        res += "0;";
                     }
                     else
                     {
-                        res += $"{matrix[i, j]} ";
+                        res += $"{matrix[i, j]};";
                     }
+                    if (j == matrix.GetLength(1)) res.TrimEnd(';');
+                    res += "\n";
                 }
-                res += "\n";
             }
-             
             string folder = Path.GetTempPath();
             string str = "OutPutFileTask2.csv";
             string path = Path.Combine(folder, str);
