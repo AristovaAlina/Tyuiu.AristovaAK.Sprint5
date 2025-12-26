@@ -8,9 +8,9 @@ namespace Tyuiu.AristovaAK.Sprint5.Task4.V21.Lib
         {
             {
                 string strX = File.ReadAllText(path);
-                double x = Convert.ToDouble(strX);
+                double x = Convert.ToDouble(strX.Replace('.',','));
                 double res = Math.Pow(x, 3) * Math.Cos(x) + 2 * x;
-                res = Math.Round(res, 3);
+                res = Math.Round(res, 3); 
 
                 return res;
             }

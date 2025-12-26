@@ -20,20 +20,16 @@ internal class Program
         Console.WriteLine("* ИСХОДНЫЕ ДАННЫЕ:                                                        *");
         Console.WriteLine("***************************************************************************");
 
-        int x = 3;
-        double y = (double)x / (Math.Pow(x, 3) + 2);
-        y = Math.Round(y, 3);
+        string path = @"C:\DataSprint5\InPutDataFileTask4V21.txt";
 
-        Console.WriteLine($"x = {x}");
-        Console.WriteLine($"y({x}) = {y}");
+        Console.WriteLine("Данные находятся в файле: " + path);
 
-        string res = ds.SaveToFileTextData(x);
+        double res = ds.LoadFromDataFile(path);
 
         Console.WriteLine("***************************************************************************");
         Console.WriteLine("* РЕЗУЛЬТАТ:                                                              *");
         Console.WriteLine("***************************************************************************");
-        Console.WriteLine($"Бинарный файл: {res}");
-        Console.WriteLine("Создан!");
+        Console.WriteLine(res);
 
         Console.ReadKey();
     }
