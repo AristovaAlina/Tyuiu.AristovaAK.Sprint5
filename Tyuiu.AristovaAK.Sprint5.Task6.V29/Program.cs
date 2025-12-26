@@ -19,17 +19,17 @@ internal class Program
         Console.WriteLine("* ИСХОДНЫЕ ДАННЫЕ:                                                        *");
         Console.WriteLine("***************************************************************************");
 
-        string path = @"С:\DataSprint5\InPutDataFileTask6V29.txt";
+        string path = @"C:\DataSprint5\InPutDataFileTask6V29.txt";
 
         Console.WriteLine("Данные находятся в файле: " + path);
 
-        double res = ds.LoadFromDataFile(path);
+        int res = ds.LoadFromDataFile(path);
 
         Console.WriteLine("***************************************************************************");
         Console.WriteLine("* РЕЗУЛЬТАТ:                                                              *");
         Console.WriteLine("***************************************************************************");
-        Console.WriteLine(res);
 
+        Console.WriteLine(res);
         Console.ReadKey();
     }
 }
