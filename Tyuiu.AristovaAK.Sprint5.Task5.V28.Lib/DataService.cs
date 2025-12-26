@@ -7,7 +7,7 @@ namespace Tyuiu.AristovaAK.Sprint5.Task5.V28.Lib
         public double LoadFromDataFile(string path)
         {
             string text = File.ReadAllText(path);
-            string[] parts = text.Split(' ', StringSplitOptions.RemoveEmptyEntries);
+            string[] parts = text.Split(' ');
 
             int minNumber = int.MaxValue;
 
