@@ -11,15 +11,28 @@ namespace Tyuiu.AristovaAK.Sprint5.Task2.V17.Lib
             {
                 for (int j = 0; j < matrix.GetLength(1); j++)
                 {
-                    if (matrix[i, j] % 2 != 0)
+                    if (j != matrix.GetLength(1) - 1)
                     {
-                        res += "0;";
+                        if (matrix[i, j] % 2 != 0)
+                        {
+                            res += "0;";
+                        }
+                        else
+                        {
+                            res += $"{matrix[i, j]};";
+                        }
                     }
                     else
                     {
-                        res += $"{matrix[i, j]};";
+                        if (matrix[i, j] % 2 != 0)
+                        {
+                            res += "0";
+                        }
+                        else
+                        {
+                            res += $"{matrix[i, j]}";
+                        }
                     }
-                    if (j == (matrix.GetLength(1) - 1)) res.TrimEnd(';');
                 }
             res += "\n";
             }
