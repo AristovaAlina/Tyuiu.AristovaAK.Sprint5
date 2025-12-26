@@ -19,9 +19,9 @@ namespace Tyuiu.AristovaAK.Sprint5.Task2.V17.Lib
                     {
                         res += $"{matrix[i, j]};";
                     }
-                    if (j == matrix.GetLength(1)) res.TrimEnd(';');
-                    res += "\n";
+                    if (j == (matrix.GetLength(1) - 1)) res.TrimEnd(';');
                 }
+            res += "\n";
             }
             string folder = Path.GetTempPath();
             string str = "OutPutFileTask2.csv";
