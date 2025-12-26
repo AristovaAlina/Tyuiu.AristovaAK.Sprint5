@@ -6,28 +6,27 @@ namespace Tyuiu.AristovaAK.Sprint5.Task5.V28.Lib
     {
         public double LoadFromDataFile(string path)
         {
-            double min = Double.MaxValue;
-            using (StreamReader reader = new StreamReader(path))
+            string text = File.ReadAllText(path);
+            string[] parts = text.Split(' ', StringSplitOptions.RemoveEmptyEntries);
+
+            int minNumber = int.MaxValue;
+
+            foreach (string part in parts)
             {
-                string line;
-                while ((line = reader.ReadLine()) != null)
+                if (double.TryParse(part, out double num))
                 {
-                    if (double.TryParse(line, out double number))
+                    if (num == (int)num && num > 0 && num % 5 == 0)
                     {
-                        if ((number < min) && (number % 5 == 0) && (number > 0)) min = number;
+                        int n = (int)num;
+                        if (n < minNumber) minNumber = n;
                     }
                 }
             }
 
-            double factorial = 1;
-            for (int i = 1; i <= (int)min; i++)
-            {
-                factorial *= i;
-            }
+            double fact = 1;
+            for (int i = 2; i <= minNumber; i++) fact *= i;
 
-            return Math.Round(factorial, 3);
-            
-
+            return Math.Round(fact, 3);
         }
     }
 }
