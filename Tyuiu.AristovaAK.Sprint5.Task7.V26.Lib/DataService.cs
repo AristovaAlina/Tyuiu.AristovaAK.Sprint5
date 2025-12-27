@@ -7,7 +7,7 @@ namespace Tyuiu.AristovaAK.Sprint5.Task7.V26.Lib
     {
         public string LoadDataAndSave(string path)
         {
-            string savePath = Path.Combine(@"C:\DataSprint5", "OutPutDataFileTask7V26.txt");
+            string savePath = Path.Combine(Path.GetTempPath(), "OutPutDataFileTask7V26.txt");
 
             FileInfo fileInfo = new FileInfo(savePath);
             bool exists = fileInfo.Exists;
